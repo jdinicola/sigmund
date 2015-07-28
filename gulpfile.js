@@ -19,7 +19,7 @@ var banner = ['/**',
     ' */',
 ''].join('\n');
 
-var build_dir = 'dist';
+var build_dir = '/Users/juliodinicola/Sites/anacristinaruiz/content/themes/sigmund';
 
 gulp.task('clean', function(cb) {
     del([build_dir + '/**/*'], { force: true },cb);
@@ -50,13 +50,9 @@ gulp.task('less', function() {
 });
 
 gulp.task('watch', function() {
-    watch('less/**/*.less', function() {
-        gulp.start('less');
-    });
-
-    watch(['!./' + build_dir + '/**/*', './assets/**/*', './**/*.hbs'], function() {
-        gulp.start('move');
+    watch(['!./' + build_dir + '/**/*', './assets/**/*', './**/*.hbs', 'less/**/*.less'], function() {
+        gulp.start('build');
     });
 });
 
-gulp.task('build', ['move', 'less']);
+gulp.task('build', ['less', 'move']);
