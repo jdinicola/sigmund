@@ -28,7 +28,6 @@ gulp.task('clean', function(cb) {
 gulp.task('move', ['clean'], function() {
     gulp.src([
         '!./node_modules/**/*',
-        '!./' + build_dir + '/**/*',
         './assets/**/*',
         './**/*.hbs'
     ], { base: './' })
@@ -50,7 +49,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('watch', function() {
-    watch(['!./' + build_dir + '/**/*', './assets/**/*', './**/*.hbs', 'less/**/*.less'], function() {
+    watch(['./assets/**/*', './**/*.hbs', 'less/**/*.less'], function() {
         gulp.start('build');
     });
 });
