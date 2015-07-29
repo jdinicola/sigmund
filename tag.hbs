@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{> custom/post-meta}}
+
+<div class="container">
+
+    <header class="page-header">
+
+        <h1 class="page-title">{{tag.name}}</h1>
+        {{#if tag.description}}<h2 class="page-description">{{tag.description}}</h2>{{/if}}
+
+        {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+    </header>
+
+    {{> loop}}
+
+    </div>
+
+</div>

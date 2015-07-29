@@ -1,0 +1,126 @@
+{{!< default}}
+
+{{> custom/post-meta}}
+
+<div class="container">
+
+    {{#post}}
+
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+
+            <h1 class="post-title">{{title}}</h1>
+
+            <section class="post-meta">
+
+                <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">Publicada el {{date format='DD/MM/YYYY'}} a las {{date format='HH:mm:ss'}}</time>
+                <span class="meta-separator"> | </span>
+                <a href="{{url}}#comments" class="comments-count" data-href="{{url absolute='true'}}"></a>
+
+            </section>
+
+            {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+        </header>
+
+        <section class="post-content">
+
+            {{content}}
+
+        </section>
+
+        <footer class="post-footer">
+
+            <div class="post-share">
+
+                {{> share}}
+
+            </div>
+
+            <div class="post-meta">
+
+                {{tags prefix='En '}}
+
+            </div>
+
+            {{#author}}
+
+                {{#if image}}
+
+                <figure class="author-image">
+
+                    <img src="{{image}}" alt="{{name}}" class="img-avatar" />
+
+                </figure>
+
+                {{/if}}
+
+                <section class="author-bio">
+
+                    <h4>{{name}}</h4>
+
+                    {{#if bio}}<p>{{bio}}</p>{{/if}}
+
+                    <div class="author-meta">
+
+                        {{#if location}}<span class="author-location">{{location}}</span>{{/if}}
+                        {{#if website}}<span class="author-website">{{website}}</span>{{/if}}
+
+                    </div>
+
+                </section>
+
+            {{/author}}
+
+        </footer>
+
+    </article>
+
+    <aside class="read-next">
+
+        {{#next_post}}
+
+            <a href="{{url}}" class="next-post">
+
+                <section class="post">
+
+                    {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+                    <h2>{{title}}</h2>
+                    <p>{{excerpt words='19'}}&hellip;</p>
+
+                </section>
+
+            </a>
+
+        {{/next_post}}
+
+        {{#prev_post}}
+
+            <a href="{{url}}" class="prev-post">
+
+                <section class="post">
+
+                    {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+                    <h2>{{title}}</h2>
+                    <p>{{excerpt words='19'}}&hellip;</p>
+
+                </section>
+
+            </a>
+
+        {{/prev_post}}
+
+    </aside>
+
+    {{/post}}
+
+    <section class="post-comments">
+
+        {{> custom/comments}}
+
+    </section>
+
+</div>
