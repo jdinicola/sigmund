@@ -1,16 +1,16 @@
 <nav class="pagination">
 
-    {{#if prev}}
+    {{#if next}}
 
-        <a href="{{page_url prev}}" class="pagination-prev">&larr; Entradas recientes</a>
+        <a href="{{page_url next}}" class="pagination-next">&larr; Entradas anteriores</a>
 
     {{/if}}
 
     <span class="pagination-pages">Página {{page}} de {{pages}}</span>
 
-    {{#if next}}
+    {{#if prev}}
 
-        <a href="{{page_url next}}" class="pagination-next">Entradas antiguas &rarr;</a>
+        <a href="{{page_url prev}}" class="pagination-prev">Entradas recientes &rarr;</a>
 
     {{/if}}
 
