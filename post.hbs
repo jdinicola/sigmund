@@ -44,34 +44,38 @@
 
             </div>
 
-            {{#author}}
+            <div class="post-author">
 
-                {{#if image}}
+                {{#author}}
 
-                <figure class="author-image">
+                    {{#if image}}
 
-                    <img src="{{image}}" alt="{{name}}" class="img-avatar" />
+                    <figure class="author-image">
 
-                </figure>
+                        <img src="{{image}}" alt="{{name}}" class="img-avatar" />
 
-                {{/if}}
+                    </figure>
 
-                <section class="author-bio">
+                    {{/if}}
 
-                    <h4>{{name}}</h4>
+                    <section class="author-bio">
 
-                    {{#if bio}}<p>{{bio}}</p>{{/if}}
+                        <h4>{{name}}</h4>
 
-                    <div class="author-meta">
+                        {{#if bio}}<p>{{bio}}</p>{{/if}}
 
-                        {{#if location}}<span class="author-location">{{location}}</span>{{/if}}
-                        {{#if website}}<span class="author-website">{{website}}</span>{{/if}}
+                        <div class="author-meta">
 
-                    </div>
+                            {{#if location}}<span class="author-location">{{location}}</span>{{/if}}
+                            {{#if website}}<span class="author-website">{{website}}</span>{{/if}}
 
-                </section>
+                        </div>
 
-            {{/author}}
+                    </section>
+
+                {{/author}}
+
+            </div>
 
         </footer>
 
