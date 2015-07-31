@@ -1,37 +1,31 @@
 <aside class="read-next">
 
-    {{#next_post}}
+    <div class="container">
 
-        <a href="{{url}}" class="next-post">
+        {{#next_post}}
 
-            <section class="post">
+            <section class="post text-left prev-post">
 
-                {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
-
-                <h2>{{title}}</h2>
-                <p>{{excerpt words='19'}}&hellip;</p>
+                <h4>Anterior</h4>
+                <h2><a href="{{url}}">{{title}}</a></h2>
 
             </section>
 
-        </a>
+        {{/next_post}}
 
-    {{/next_post}}
+        {{#prev_post}}
 
-    {{#prev_post}}
+            <section class="post text-right next-post">
 
-        <a href="{{url}}" class="prev-post">
-
-            <section class="post">
-
-                {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
-
-                <h2>{{title}}</h2>
-                <p>{{excerpt words='19'}}&hellip;</p>
+                <h4>Siguiente</h4>
+                <h2><a href="{{url}}">{{title}}</a></h2>
 
             </section>
 
-        </a>
+        {{/prev_post}}
 
-    {{/prev_post}}
+        <div class="clearfix"></div>
+
+    </div>
 
 </aside>

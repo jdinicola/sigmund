@@ -96,13 +96,64 @@ article {
         padding-bottom: @line-height-computed;
         border-top: 1px solid darken(@main-bg, 5%);
         border-bottom: 1px solid darken(@main-bg, 5%);
-        text-align: center;
     }
 
     .post-author {
         border: 1px solid darken(@main-bg, 5%);
         background-color: darken(@main-bg, 3%);
         margin-bottom: @line-height-computed * 3;
+        padding: @line-height-computed * 2;
+
+        .author-image {
+            float: left;
+            margin: 0;
+            width: 20%;
+        }
+
+        .author-bio {
+            float: left;
+            width: 80%;
+
+            h4 {
+                margin-top: 0;
+                padding-bottom: @line-height-computed;
+                border-bottom: 1px solid darken(@main-bg, 7%);
+            }
+        }
+    }
+}
+
+.read-next {
+    padding-top: @line-height-computed * 2;
+    padding-bottom: @line-height-computed * 2;
+    border-bottom: 1px solid darken(@main-bg, 5%);
+
+    h2 {
+        margin: 0;
+        font-size: @font-size-h3;
+    }
+
+    h4 {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: @line-height-computed / 2;
+        color: @gray-light;
+        font-size: @font-size-base;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    .post {
+        width: 50%;
+        float: left;
+
+        &.prev-post h2 {
+            padding-right: @line-height-computed;
+        }
+
+        &.next-post h2 {
+            padding-left: @line-height-computed;
+        }
     }
 }
 
