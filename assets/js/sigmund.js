@@ -18,7 +18,9 @@ $(function() {
     var body = $('body');
     var drawer = $('#drawer');
 
-    $('.toggle-drawer').click(function() {
+    $('.toggle-drawer').click(function(e) {
+
+        e.preventDefault();
 
         if (drawer.data('state') == 'closed') {
 
