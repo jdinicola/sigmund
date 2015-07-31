@@ -1,0 +1,68 @@
+// Colors
+@gray-base:               #000;
+@gray-darker:             lighten(@gray-base, 13.5%);
+@gray-dark:               lighten(@gray-base, 20%);
+@gray:                    lighten(@gray-base, 33.5%);
+@gray-light:              lighten(@gray-base, 60%);
+@gray-lighter:            lighten(@gray-base, 90%);
+@white:                   #fff;
+
+@primary-color:           #2780E3;
+@success-color:           #3FB618;
+@info-color:              #9954BB;
+@warning-color:           #FF7518;
+@danger-color:            #FF0039;
+
+@body-bg:                 @white;
+@main-bg:                 @white;
+@cover-bg:                @gray-darker;
+@text-color:              @gray;
+@drawer-bg:               @gray-dark;
+
+@link-color:              @primary-color;
+@link-hover-color:        darken(@link-color, 15%);
+@link-hover-decoration:   none;
+
+@navigation-border-color: @gray-lighter;
+@hr-border-color:         @gray-lighter;
+@blockquote-border-color: @gray-lighter;
+@avatar-border-color:     #fff;
+
+@twitter-color:           #00aced;
+@facebook-color:          #3b5998;
+@rss-color:               #f26522;
+@email-color:             #00bf8f;
+
+// Typography
+@font-family-sans-serif:  "Roboto", Calibri, Candara, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          15px;
+@font-size-large:         ceil((@font-size-base * 1.25));
+@font-size-small:         ceil((@font-size-base * 0.85));
+
+@font-size-h1:            floor((@font-size-base * 2.6));
+@font-size-h2:            floor((@font-size-base * 2.15));
+@font-size-h3:            ceil((@font-size-base * 1.7));
+@font-size-h4:            ceil((@font-size-base * 1.25));
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85));
+
+@font-size-blockquote:    ceil((@font-size-base * 2));
+
+@line-height-base:        1.428571429;
+@line-height-computed:    floor((@font-size-base * @line-height-base));
+
+@headings-font-family:    @font-family-base;
+@headings-font-weight:    400;
+@headings-line-height:    1.1;
+@headings-color:          darken(@text-color, 20%);
+@headings-small-color:    lighten(@headings-color, 40%);
+
+// Layout
+@drawer-width:            250px;
+
+// Misc
+@avatar-size: 80px;
