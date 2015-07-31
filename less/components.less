@@ -21,25 +21,6 @@
         margin-top: 0;
     }
 
-    .site-nav {
-        padding-left: 0;
-        list-style: none;
-        margin-bottom: @line-height-computed * 2;
-
-        li {
-            margin-bottom: @line-height-computed / 2;
-        }
-
-        a {
-            color: lighten(@drawer-bg, 30%);
-
-            &:hover,
-            &:focus {
-                color: lighten(@drawer-bg, 100%);
-            }
-        }
-    }
-
     .drawer-inner {
         padding: @line-height-computed;
     }
@@ -51,6 +32,27 @@
         right: (@line-height-computed * 3) * -1;
         padding: @line-height-computed;
         color: @white;
+    }
+}
+
+.site-nav {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: @line-height-computed * 2;
+    text-transform: uppercase;
+    font-size: @font-size-small;
+
+    li {
+        margin-bottom: @line-height-computed / 2;
+    }
+
+    a {
+        color: lighten(@drawer-bg, 30%);
+
+        &:hover,
+        &:focus {
+            color: lighten(@drawer-bg, 100%);
+        }
     }
 }
 
@@ -138,31 +140,35 @@
     text-transform: uppercase;
     padding-top: @line-height-computed * 2;
     padding-bottom: @line-height-computed * 2;
-    border-bottom: 1px solid darken(@body-bg, 5%);
-    background-color: darken(@body-bg, 3%);
+    border-bottom: 1px solid darken(@main-bg, 5%);
+    background-color: darken(@main-bg, 3%);
 
     .pagination-pages {
         float: left;
-        color: darken(@body-bg, 30%);
+        color: darken(@main-bg, 30%);
     }
 
     .pagination-controls {
         display: block;
         float: right;
-        color: darken(@body-bg, 30%);
+        color: darken(@main-bg, 30%);
 
         a {
-            color: darken(@body-bg, 40%);
+            color: darken(@main-bg, 40%);
 
             &:hover,
             &:focus {
-                color: darken(@body-bg, 60%);
+                color: darken(@main-bg, 60%);
             }
         }
 
-        .pagination-separator:first-child,
-        .pagination-separator:last-child {
-            display: none;
+        .pagination-separator {
+            font-size: @font-size-base;
+
+            &:first-child,
+            &:last-child {
+                display: none;
+            }
         }
     }
 }

@@ -6,6 +6,10 @@
 
 }
 
+main {
+    background-color: @main-bg;
+}
+
 #site-header {
 
     h1 {
@@ -36,7 +40,7 @@
 article {
     padding-top: @line-height-computed * 4;
     padding-bottom: @line-height-computed * 4;
-    border-bottom: 1px solid darken(@body-bg, 5%);
+    border-bottom: 1px solid darken(@main-bg, 5%);
 
     .post-header {
         text-align: center;
@@ -62,5 +66,30 @@ article {
 
     .post-footer {
         text-align: center;
+    }
+}
+
+#site-footer {
+    padding-top: @line-height-computed;
+    padding-bottom: @line-height-computed;
+    font-weight: 100;
+
+    .site-nav {
+        float: left;
+
+        li {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: @line-height-computed / 2;
+        }
+    }
+
+    .social-nav {
+        float: right;
+        font-size: @font-size-large;
+
+        li:last-child {
+            padding-right: 0;
+        }
     }
 }
