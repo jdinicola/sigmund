@@ -2,19 +2,13 @@
 
 {{> custom/post-meta}}
 
-<div class="container">
+<header id="page-header">
 
-    <header class="page-header">
+    <h1 class="page-title">{{tag.name}}</h1>
+    {{#if tag.description}}<h2 class="page-description">{{tag.description}}</h2>{{/if}}
 
-        <h1 class="page-title">{{tag.name}}</h1>
-        {{#if tag.description}}<h2 class="page-description">{{tag.description}}</h2>{{/if}}
+    {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
 
-        {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+</header>
 
-    </header>
-
-    {{> loop}}
-
-    </div>
-
-</div>
+{{> loop}}
