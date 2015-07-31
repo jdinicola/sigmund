@@ -1,17 +1,29 @@
 <nav class="pagination">
 
-    {{#if next}}
+    <div class="container">
 
-        <a href="{{page_url next}}" class="pagination-next">&larr; Entradas anteriores</a>
+        <span class="pagination-pages">Página {{page}} de {{pages}}</span>
 
-    {{/if}}
+        <span class="pagination-controls">
 
-    <span class="pagination-pages">Página {{page}} de {{pages}}</span>
+            {{#if prev}}
 
-    {{#if prev}}
+                <a href="{{page_url prev}}" class="pagination-prev"><span class="fa fa-angle-left"></span> Anterior</a>
 
-        <a href="{{page_url prev}}" class="pagination-prev">Entradas recientes &rarr;</a>
+            {{/if}}
 
-    {{/if}}
+            <span class="pagination-separator"> | </span>
+
+            {{#if next}}
+
+                <a href="{{page_url next}}" class="pagination-next">Siguiente <span class="fa fa-angle-right"></span></a>
+
+            {{/if}}
+
+        </span>
+
+        <div class="clearfix"></div>
+
+    </div>
 
 </nav>
