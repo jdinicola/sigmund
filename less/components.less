@@ -68,7 +68,7 @@
 
     a {
         display: block;
-        padding: (@line-height-computed / 4);
+        padding: (@line-height-computed / 5);
         color: lighten(@drawer-bg, 30%);
 
         &:hover {
@@ -110,6 +110,59 @@
             &:hover {
                 color: lighten(@drawer-bg, 90%);
             }
+        }
+    }
+}
+
+.tags {
+    display: block;
+
+    a {
+        display: inline-block;
+        padding: @line-height-computed / 4;
+        border: 1px solid fade(@link-color, 70%);
+        font-size: @font-size-small - 2;
+        color: fade(@link-color, 70%);
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            border-color: @link-color;
+            color: @link-color;
+        }
+    }
+}
+
+.pagination {
+    font-size: @font-size-small;
+    text-transform: uppercase;
+    padding-top: @line-height-computed * 2;
+    padding-bottom: @line-height-computed * 2;
+    border-bottom: 1px solid darken(@body-bg, 5%);
+    background-color: darken(@body-bg, 3%);
+
+    .pagination-pages {
+        float: left;
+        color: darken(@body-bg, 30%);
+    }
+
+    .pagination-controls {
+        display: block;
+        float: right;
+        color: darken(@body-bg, 30%);
+
+        a {
+            color: darken(@body-bg, 40%);
+
+            &:hover,
+            &:focus {
+                color: darken(@body-bg, 60%);
+            }
+        }
+
+        .pagination-separator:first-child,
+        .pagination-separator:last-child {
+            display: none;
         }
     }
 }
