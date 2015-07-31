@@ -1,9 +1,25 @@
-<ul class="site-nav">
+<div id="drawer" class="drawer-closed"  data-state="closed">
 
-    {{#foreach navigation}}
+    <div class="drawer-inner">
 
-        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url}}">{{label}}</a></li>
+        <h5>Menú</h5>
 
-    {{/foreach}}
+        <ul class="site-nav">
 
-</ul>
+            {{#foreach navigation}}
+
+                <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url}}">{{label}}</a></li>
+
+            {{/foreach}}
+
+        </ul>
+
+        <h5>Social</h5>
+
+        {{> custom/social}}
+
+    </div>
+
+    <a href="#" class="toggle-drawer"><span class="fa fa-bars"></span></a>
+
+</div>

@@ -1,6 +1,11 @@
-{{#if @blog.logo}}<a href="{{@blog.url}}" class="site-logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}" class="img-avatar"></a>{{/if}}
-<h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+{{ navigation}}
 
-{{navigation}}
+<div class="site-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}>
 
-{{> custom/social}}
+    {{#if @blog.logo}}<a href="{{@blog.url}}" class="site-logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}" class="img-avatar"></a>{{/if}}
+    <h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{#if @blog.description}}<h2 class="site-description">{{@blog.description}}</h2>{{/if}}
+
+    <div class="clearfix"></div>
+
+</div>
