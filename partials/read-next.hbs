@@ -2,27 +2,31 @@
 
     <div class="container">
 
-        {{#next_post}}
+        <section class="post text-left prev-post">
 
-            <section class="post text-left prev-post">
+            &nbsp;
+
+            {{#next_post}}
 
                 <h4>Anterior</h4>
                 <h2><a href="{{url}}">{{title}}</a></h2>
 
-            </section>
+            {{/next_post}}
 
-        {{/next_post}}
+        </section>
 
-        {{#prev_post}}
+        <section class="post text-right next-post">
 
-            <section class="post text-right next-post">
+            &nbsp;
 
-                <h4>Siguiente</h4>
-                <h2><a href="{{url}}">{{title}}</a></h2>
+            {{#prev_post}}
 
-            </section>
+            <h4>Siguiente</h4>
+            <h2><a href="{{url}}">{{title}}</a></h2>
 
-        {{/prev_post}}
+            {{/prev_post}}
+
+        </section>
 
         <div class="clearfix"></div>
 
