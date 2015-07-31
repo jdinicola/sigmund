@@ -1,0 +1,96 @@
+@import url("//fonts.googleapis.com/css?family=Roboto:100,300,400,700");
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    height: 100%;
+    max-height: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @text-color;
+    background-color: @body-bg;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+    transition: left .2s ease-out;
+}
+
+.push-drawer {
+    left: @drawer-width;
+}
+
+/*
+::-moz-selection {
+    color: @gray-base;
+    background: @warning-color;
+    text-shadow: none;
+}
+
+::selection {
+    color: @gray-base;
+    background: @warning-color;
+    text-shadow: none;
+}
+*/
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+    transition: all .2s ease;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: @link-hover-decoration;
+    }
+
+    .site-cover & {
+        color: @white;
+
+        &:hover,
+        &:focus {
+            color: darken(@white, 10%);;
+        }
+    }
+}
+
+img {
+      vertical-align: middle;
+}
+
+.img-avatar {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid @avatar-border-color;
+    width: @avatar-size - 6;
+    height: @avatar-size - 6;
+}
+
+hr {
+    margin-top:    @line-height-computed;
+    margin-bottom: @line-height-computed;
+    border: 0;
+    border-top: 1px solid @hr-border-color;
+}
+
+.clearfix {
+    clear: both;
+}
