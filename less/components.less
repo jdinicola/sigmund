@@ -186,3 +186,55 @@
         }
     }
 }
+
+.btn {
+    display: inline-block;
+    padding: (@line-height-computed / 2) @line-height-computed;
+    color: @white;
+    font-size: @font-size-small;
+    font-weight: 100;
+
+    &:hover {
+        color: @white;
+    }
+
+    &.btn-twitter {
+        background-color: @twitter-color;
+
+        &:hover {
+            background-color: darken(@twitter-color, 5%);
+        }
+    }
+
+    &.btn-facebook {
+        background-color: @facebook-color;
+
+        &:hover {
+            background-color: darken(@facebook-color, 5%);
+        }
+    }
+
+    &.btn-whatsapp {
+        background-color: @whatsapp-color;
+
+        &:hover {
+            background-color: darken(@whatsapp-color, 5%);
+        }
+    }
+
+    &.btn-email {
+        background-color: @email-color;
+
+        &:hover {
+            background-color: darken(@email-color, 5%);
+        }
+    }
+
+    &.btn-rss {
+        background-color: @rss-color;
+
+        &:hover {
+            background-color: darken(@rss-color, 5%);
+        }
+    }
+}
