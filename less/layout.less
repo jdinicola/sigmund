@@ -2,7 +2,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    width: 800px;
+    width: @container-width;
 
 }
 
@@ -45,7 +45,7 @@ article {
     &.featured {
         background-color: fade(@success-color, 10%);
 
-        
+
     }
 
     .post-header {
@@ -61,6 +61,13 @@ article {
             font-size: @font-size-small - 2;
             color: @gray-light;
             text-transform: uppercase;
+        }
+
+        .post-image {
+            position: relative;
+            width: @container-width + 300;
+            left: -150px;
+            margin-top: @line-height-computed * 2;
         }
     }
 
