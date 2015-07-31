@@ -2,28 +2,44 @@
 
 <article class="{{post_class}}">
 
-    <header class="post-header">
+    <div class="container">
 
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <header class="post-header">
 
-    </header>
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 
-    <section class="post-excerpt">
+            <span class="post-meta">
 
-        <p>{{excerpt words='26'}} <a href="{{url}}" class="read-more">&raquo;</a></p>
+                Por {{author.name}}, <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">{{date timeago='true'}}</time> |
 
-    </section>
+                <a href="{{url}}#comments">
 
-    <footer class="post-meta">
+                    <span class="comments-count" data-href="{{url absolute='true'}}"></span>
+                    <span class="fa fa-comments"></span>
 
-        Por {{author.name}}
-        {{tags prefix=' en '}}
-        <span class="meta-separator"> | </span>
-        <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">{{date timeago='true'}}</time>
-        <span class="meta-separator"> | </span>
-        <a href="{{url}}#comments" class="comments-count" data-href="{{url absolute='true'}}"></a>
+                </a>
 
-    </footer>
+            </span>
+
+        </header>
+
+        <section class="post-excerpt">
+
+            <p>{{excerpt words='60'}}&hellip; <a href="{{url}}" class="read-more" title="Seguir leyendo"><span class="fa fa-angle-double-right"></span></a></p>
+
+        </section>
+
+        <footer class="post-footer">
+
+            <div class="tags">
+
+                {{tags separator=' '}}
+
+            </div>
+
+        </footer>
+
+    </div>
 
 </article>
 
