@@ -1,0 +1,37 @@
+<aside class="read-next">
+
+    {{#next_post}}
+
+        <a href="{{url}}" class="next-post">
+
+            <section class="post">
+
+                {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+                <h2>{{title}}</h2>
+                <p>{{excerpt words='19'}}&hellip;</p>
+
+            </section>
+
+        </a>
+
+    {{/next_post}}
+
+    {{#prev_post}}
+
+        <a href="{{url}}" class="prev-post">
+
+            <section class="post">
+
+                {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+
+                <h2>{{title}}</h2>
+                <p>{{excerpt words='19'}}&hellip;</p>
+
+            </section>
+
+        </a>
+
+    {{/prev_post}}
+
+</aside>
