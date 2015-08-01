@@ -2,11 +2,11 @@
 
 {{> custom/post-meta}}
 
-<div class="container">
+{{#post}}
 
-    {{#post}}
+<article class="{{post_class}}">
 
-    <article class="{{post_class}}">
+    <div class="container">
 
         <header class="post-header">
 
@@ -14,13 +14,22 @@
 
             <section class="post-meta">
 
-                <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">Publicada el {{date format='DD/MM/YYYY'}} a las {{date format='HH:mm:ss'}}</time>
-                <span class="meta-separator"> | </span>
-                <a href="{{url}}#comments" class="comments-count" data-href="{{url absolute='true'}}"></a>
+                Por {{author.name}}, <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">{{date timeago='true'}}</time> |
+
+                <a href="{{url}}#comments">
+
+                    <span class="comments-count" data-href="{{url absolute='true'}}"></span>
+                    <span class="fa fa-comments"></span>
+
+                </a>
 
             </section>
 
-            {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+            <div class="post-image">
+
+                {{#if image}}<img src="{{image}}" alt="{{title}}" class="img-responsive" />{{/if}}
+
+            </div>
 
         </header>
 
@@ -35,12 +44,6 @@
             <div class="post-share">
 
                 {{> share}}
-
-            </div>
-
-            <div class="post-meta">
-
-                {{tags prefix='En '}}
 
             </div>
 
@@ -66,65 +69,37 @@
 
                         <div class="author-meta">
 
-                            {{#if location}}<span class="author-location">{{location}}</span>{{/if}}
-                            {{#if website}}<span class="author-website">{{website}}</span>{{/if}}
+                            {{#if location}}<span class="author-location"><span class="fa fa-map-marker fa-fw"></span> {{location}}</span>{{/if}}
+                            {{#if website}}<span class="author-website"><span class="fa fa-link fa-fw"></span> <a href="{{website}}">{{website}}</a></span>{{/if}}
 
                         </div>
 
                     </section>
 
+                    <div class="clearfix"></div>
+
                 {{/author}}
+
+            </div>
+
+            <div class="tags">
+
+                {{tags separator=' '}}
 
             </div>
 
         </footer>
 
-    </article>
+    </div>
 
-    <aside class="read-next">
+</article>
 
-        {{#next_post}}
+{{> read-next}}
 
-            <a href="{{url}}" class="next-post">
+{{/post}}
 
-                <section class="post">
+<section class="post-comments">
 
-                    {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+    {{> custom/comments}}
 
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words='19'}}&hellip;</p>
-
-                </section>
-
-            </a>
-
-        {{/next_post}}
-
-        {{#prev_post}}
-
-            <a href="{{url}}" class="prev-post">
-
-                <section class="post">
-
-                    {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
-
-                    <h2>{{title}}</h2>
-                    <p>{{excerpt words='19'}}&hellip;</p>
-
-                </section>
-
-            </a>
-
-        {{/prev_post}}
-
-    </aside>
-
-    {{/post}}
-
-    <section class="post-comments">
-
-        {{> custom/comments}}
-
-    </section>
-
-</div>
+</section>
