@@ -25,11 +25,13 @@ $(function() {
         if (drawer.data('state') == 'closed') {
 
             body.addClass('push-drawer');
+            drawer.removeClass('drawer-closed').addClass('drawer-open');
             drawer.data('state', 'open');
 
         } else {
 
             body.removeClass('push-drawer');
+            drawer.removeClass('drawer-open').addClass('drawer-closed');
             drawer.data('state', 'closed');
 
         }

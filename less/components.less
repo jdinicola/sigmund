@@ -14,7 +14,7 @@
 
 #drawer {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: @drawer-width * -1;
     width: @drawer-width;
@@ -22,12 +22,18 @@
     z-index: 1000;
     background-color: @drawer-bg;
     transition: left .2s ease-out;
-    font-weight: 100;
     box-shadow: inset -5px 0 6px darken(@drawer-bg, 5%);
+
+    &.drawer-open {
+        left: 0;
+    }
+
+    &.drawer-closed {
+        left: @drawer-width * -1;
+    }
 
     h5 {
         color: lighten(@drawer-bg, 70%);
-        font-weight: 100;
         text-transform: uppercase;
         border-bottom: 1px solid lighten(@drawer-bg, 10%);
         padding-bottom: @line-height-computed / 2;
@@ -46,6 +52,7 @@
         right: (@line-height-computed * 3) * -1;
         padding: @line-height-computed;
         color: @white;
+        text-shadow: 0 3px 0 @gray-base;
     }
 }
 
@@ -61,7 +68,7 @@
     }
 
     a {
-        color: lighten(@drawer-bg, 30%);
+        color: lighten(@drawer-bg, 50%);
 
         &:hover,
         &:focus {
