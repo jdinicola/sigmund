@@ -92,8 +92,8 @@ article {
 
     .post-share {
         margin-bottom: @line-height-computed * 3;
-        padding-top: @line-height-computed;
-        padding-bottom: @line-height-computed;
+        padding-top: @line-height-computed * 2;
+        padding-bottom: @line-height-computed * 2;
         border-top: 1px solid darken(@main-bg, 5%);
         border-bottom: 1px solid darken(@main-bg, 5%);
         text-align: center;
@@ -167,10 +167,18 @@ article {
     padding-bottom: @line-height-computed;
     font-weight: 100;
 
+    @media (max-width: @screen-sm) {
+        text-align: center;
+    }
+
     .site-nav {
         float: left;
         margin-top: @line-height-computed / 2.4;
         margin-bottom: 0;
+
+        @media (max-width: @screen-sm) {
+            display: none;
+        }
 
         li {
             display: inline-block;
@@ -182,6 +190,10 @@ article {
     .social-nav {
         float: right;
         font-size: @font-size-large;
+
+        @media (max-width: @screen-sm) {
+            float: none;
+        }
 
         li:last-child {
             padding-right: 0;
