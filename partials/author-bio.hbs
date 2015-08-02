@@ -1,0 +1,30 @@
+{{#author}}
+
+    {{#if image}}
+
+    <figure class="author-image">
+
+        <img src="{{image}}" alt="{{name}}" class="img-avatar" />
+
+    </figure>
+
+    {{/if}}
+
+    <section class="author-bio">
+
+        <h4>{{name}}</h4>
+
+        {{#if bio}}<p>{{bio}}</p>{{/if}}
+
+        <div class="author-meta">
+
+            {{#if location}}<span class="author-location"><span class="fa fa-map-marker fa-fw"></span> {{location}}</span>{{/if}}
+            {{#if website}}<span class="author-website"><span class="fa fa-link fa-fw"></span> <a href="{{website}}">{{website}}</a></span>{{/if}}
+
+        </div>
+
+    </section>
+
+    <div class="clearfix"></div>
+
+{{/author}}
