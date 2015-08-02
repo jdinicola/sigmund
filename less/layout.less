@@ -14,6 +14,11 @@ main {
 
     h1 {
         margin: (@line-height-computed * 2) 0;
+
+        @media (max-width: @screen-sm) {
+            margin: (@line-height-computed * 1.5) 0;
+            font-size: @font-size-h3;
+        }
     }
 
     h2 {
@@ -25,16 +30,21 @@ main {
             margin-bottom: 0;
         }
     }
-}
 
-.site-cover {
-    position: relative;
-    text-align: center;
-    padding-top: @line-height-computed * 5;
-    padding-bottom: @line-height-computed * 5;
-    background-position: center center;
-    background-size: cover;
-    background-color: @cover-bg;
+    .site-cover {
+        position: relative;
+        text-align: center;
+        padding-top: @line-height-computed * 5;
+        padding-bottom: @line-height-computed * 5;
+        background-position: center center;
+        background-size: cover;
+        background-color: @cover-bg;
+
+        @media (max-width: @screen-sm) {
+            padding-top: @line-height-computed * 2;
+            padding-bottom: @line-height-computed * 2;
+        }
+    }
 }
 
 #page-header {
