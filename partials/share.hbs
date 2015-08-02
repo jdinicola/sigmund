@@ -1,5 +1,4 @@
-<a href="#" class="btn btn-twitter"><span class="fa fa-twitter fw"></span> <span class="hidden-xs">Twittear</span></a>
-<a href="#" class="btn btn-facebook"><span class="fa fa-facebook fw"></span> <span class="hidden-xs">Compartir</span></a>
-<a href="#" class="btn btn-whatsapp"><span class="fa fa-whatsapp fw"></span> <span class="hidden-xs">Compartir</span></a>
-<a href="#" class="btn btn-email"><span class="fa fa-envelope fw"></span> <span class="hidden-xs">Enviar</span></a>
-<a href="#" class="btn btn-rss"><span class="fa fa-rss fw"></span> <span class="hidden-xs">Suscribirme</span></a>
+<a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute='true'}}" class="btn btn-twitter"><span class="fa fa-twitter fw"></span> <span class="hidden-xs">Twittear</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" onclick="window.open(this.href, 'facebook-share', 'width=820,height=420');return false;" class="btn btn-facebook"><span class="fa fa-facebook fw"></span> <span class="hidden-xs">Compartir</span></a>
+<a href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=510,height=530');return false;"class="btn btn-googleplus"><span class="fa fa-google-plus fw"></span> <span class="hidden-xs">Compartir</span></a>
+<a href="mailto:?subject={{title}}&amp;body={{url absolute='true'}}" class="btn btn-email"><span class="fa fa-envelope fw"></span> <span class="hidden-xs">Enviar</span></a>
