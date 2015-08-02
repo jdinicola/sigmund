@@ -38,4 +38,24 @@ $(function() {
 
     });
 
+    $(window).scroll(function() {
+
+        if ($(this).scrollTop() > 100) {
+            $('.scroll-top').fadeIn();
+        } else {
+            $('.scroll-top').fadeOut();
+        }
+
+    });
+
+    $('.scroll-top').click(function(e) {
+
+        e.preventDefault();
+
+        $('html, body').animate({scrollTop: 0}, 800);
+
+        return false;
+
+    });
+
 });

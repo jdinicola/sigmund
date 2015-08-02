@@ -44,15 +44,33 @@
     .drawer-inner {
         padding: @line-height-computed;
     }
+}
 
-    .toggle-drawer {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: (@line-height-computed * 3) * -1;
-        padding: @line-height-computed;
+.toggle-drawer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: @line-height-computed;
+    color: @white;
+    z-index: 1001;
+
+    &:hover {
         color: @white;
-        text-shadow: 0 3px 0 @gray-base;
+    }
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: @line-height-computed;
+    color: fade(@gray, 30%);
+    z-index: 1001;
+
+    &:hover {
+        color: fade(@gray, 50%);;
     }
 }
 
