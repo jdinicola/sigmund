@@ -28,20 +28,6 @@ body {
     left: @drawer-width;
 }
 
-/*
-::-moz-selection {
-    color: @gray-base;
-    background: @warning-color;
-    text-shadow: none;
-}
-
-::selection {
-    color: @gray-base;
-    background: @warning-color;
-    text-shadow: none;
-}
-*/
-
 input,
 button,
 select,
@@ -74,6 +60,11 @@ a {
 
 img {
       vertical-align: middle;
+
+      .post-content & {
+          display: block;
+          max-width: 100%;
+      }
 }
 
 hr {
@@ -85,4 +76,11 @@ hr {
 
 .clearfix {
     clear: both;
+}
+
+.hidden-xs {
+
+    @media (max-width: @screen-sm) {
+        display: none;
+    }
 }
