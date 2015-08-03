@@ -8,6 +8,13 @@ You can see the live demo [here](http://anacristinaruiz.com)
 
 ## Download
 
+Clone the repo:
+````
+git clone https://github.com/jdinicola/sigmund.git
+````
+
+Or download from [here](https://github.com/jdinicola/sigmund/archive/master.zip) as a zip file or 
+
 ## Installation and configuration
 
 1. Install dependencies:
