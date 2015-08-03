@@ -14,14 +14,9 @@
 
             <section class="post-meta">
 
-                Por {{author.name}} | <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">{{date format='DD/MM/YYYY'}}</time> |
-
-                <a href="{{url}}#comments">
-
-                    <span class="comments-count" data-href="{{url absolute='true'}}"></span>
-                    <span class="fa fa-comments"></span>
-
-                </a>
+                <span><span class="fa fa-user fa-fw"></span> {{author.name}}</span>
+                <span><span class="fa fa-clock-o fa-fw"></span> <time class="post-date" datetime="{{date format='DD/MM/YYYY'}}">{{date format='DD/MM/YYYY'}}</time></span>
+                <span><a href="{{url}}#comments"><span class="fa fa-comments fa-fw"></span> <span class="comments-count" data-href="{{url absolute='true'}}"></span></a></span>
 
             </section>
 

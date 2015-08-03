@@ -89,6 +89,14 @@ article {
             font-size: @font-size-small - 2;
             color: @gray-light;
             text-transform: uppercase;
+
+            > span {
+                margin-right: @line-height-computed;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
 
         .post-image {
