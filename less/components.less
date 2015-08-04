@@ -263,3 +263,29 @@
         }
     }
 }
+
+.cookies-message {
+    display: none;
+    position: relative;
+    background-color: @primary-color;
+    color: @white;
+    font-size: @font-size-small - 1;
+    font-weight: 100;
+
+    p {
+        padding: @line-height-computed;
+        padding-right: @line-height-computed * 3;
+    }
+
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+
+    .btn-close-msg {
+        position: absolute;
+        top: @line-height-computed;
+        right: @line-height-computed;
+        font-size: @font-size-large;
+    }
+}

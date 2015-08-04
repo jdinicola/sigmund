@@ -58,4 +58,19 @@ $(function() {
 
     });
 
+    if (!$.cookie('msgcookie')) {
+
+        $('.cookies-message').fadeIn();
+
+        $('.btn-close-msg').click(function(e) {
+
+            e.preventDefault();
+
+            $.cookie('msgcookie', 'aceptado');
+            $('.cookies-message').fadeOut();
+
+        });
+
+    }
+
 });
