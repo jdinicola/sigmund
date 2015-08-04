@@ -13,7 +13,7 @@ Clone the repo:
 git clone https://github.com/jdinicola/sigmund.git
 ````
 
-Or download from [here](https://github.com/jdinicola/sigmund/archive/master.zip) as a zip file or 
+Or download from [releases page](https://github.com/jdinicola/sigmund/releases) as a zip file or 
 
 ## Installation and configuration
 
