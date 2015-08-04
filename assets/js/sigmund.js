@@ -66,7 +66,7 @@ $(function() {
 
             e.preventDefault();
 
-            $.cookie('msgcookie', 'aceptado');
+            $.cookie('msgcookie', 'aceptado', { expires: 365 });
             $('.cookies-message').fadeOut();
 
         });
