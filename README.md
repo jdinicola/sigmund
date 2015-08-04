@@ -40,6 +40,7 @@ Or download from [releases page](https://github.com/jdinicola/sigmund/releases) 
     * `index-meta.hbs` - Additional meta tags for home page
     * `post-meta.hbs` - Additional meta tags for post page
     * `social.hbs` - Social icons for drawer and footer (TIP: Sigmund uses Font Awesome icons)
+    * `cookies-message.hbs` - Cookies policy text (displays at bottom of any page)
 
 > Note: you can modify all the `.hbs` files if you need it
 
