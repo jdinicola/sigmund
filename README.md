@@ -13,7 +13,7 @@ Clone the repo:
 git clone https://github.com/jdinicola/sigmund.git
 ````
 
-Or download from [releases page](https://github.com/jdinicola/sigmund/releases) as a zip file or 
+Or download from [releases page](https://github.com/jdinicola/sigmund/releases) as a zip file or
 
 ## Installation and configuration
 
@@ -62,6 +62,7 @@ Or download from [releases page](https://github.com/jdinicola/sigmund/releases) 
 
 * normalize.less by Markus Reiter [https://github.com/reitermarkus/normalize.less](https://github.com/reitermarkus/normalize.less)
 * Font awesome [https://github.com/FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+* jquery-cookie by [Klaus Hartl](https://github.com/carhartl/jquery-cookie)
 
 ## License
 
